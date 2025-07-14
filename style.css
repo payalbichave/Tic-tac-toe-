@@ -1,0 +1,140 @@
+/* General body and layout */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #f9ce34, #ee2a7b, #6228d7);
+  background-size: 200% 200%;
+  animation: gradientMove 10s ease infinite;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  color: #fff;
+}
+
+/* Animate background */
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Container */
+.container {
+  text-align: center;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+}
+
+/* Heading */
+h1 {
+  margin-bottom: 20px;
+  font-size: 2.5rem;
+  color: #fff;
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+}
+
+/* Board Grid */
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  gap: 15px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+/* Cells */
+.cell {
+  width: 100px;
+  height: 100px;
+  background-color: #ffffffcc;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid transparent;
+  border-radius: 15px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+}
+
+.cell:hover {
+  transform: scale(1.05);
+  background-color: #ffe8e8;
+}
+
+/* Player X and O Colors */
+.cell:contains("X") {
+  color: #e91e63;
+}
+.cell:contains("O") {
+  color: #3f51b5;
+}
+
+/* Winner Highlight */
+.winner {
+  background-color: #a0f9bc;
+  border-color: #0f9d58;
+  color: #0f9d58 !important;
+  box-shadow: 0 0 20px #0f9d58;
+}
+
+/* Info Text */
+.info {
+  font-size: 1.2rem;
+  margin-top: 10px;
+}
+
+/* Status Message */
+#status {
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: #fff;
+}
+
+/* Restart Button */
+button {
+  padding: 10px 25px;
+  font-size: 1rem;
+  cursor: pointer;
+  border: none;
+  border-radius: 25px;
+  background: #ffffffcc;
+  color: #333;
+  font-weight: bold;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: #fff;
+}
+
+.player-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.player-form input {
+  padding: 10px;
+  width: 250px;
+  border-radius: 10px;
+  border: none;
+  font-size: 1rem;
+}
+
+#status {
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: #fff;
+  line-height: 1.5;
+}
