@@ -30,7 +30,7 @@ This is a simple web-based Tic Tac Toe game for two players, built using HTML, C
 ## How to Run Locally
 
 1. Clone this repository:
-git clone https://github.com/payalbichave/Tic-tac-toe.git
+git clone https://github.com/payalbichave/Tic-tac-toe-.git
 
 2. Open the project folder.
 3. Open `index.html` in your browser.
